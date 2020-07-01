@@ -7,13 +7,23 @@ public class Main {
 
 	
 	public static void main(String[] args) {
-		LC_1313_Decompress decompress = new LC_1313_Decompress();
-		int [] nums = {1, 1, 2, 3};
-		int[] res = decompress.decompressRLElist(nums);
-		printRes(res);
+		
+		LC_1389_CreateTarget createTarget = new LC_1389_CreateTarget();
+		int[] nums = {0,1,2,3,4};
+		int[] index = {0,1,2,2,1};
+ 		int[] res = createTarget.createTargetArray(nums, index);
+ 		printRes(res);
+ 		
 	}
 
 	
+	@SuppressWarnings("unused")
+	private void LC_1313() {
+		LC_1313_Decompress decompress = new LC_1313_Decompress();
+		int[] nums = {65,44,72,15};
+		int[] res = decompress.decompressRLElist(nums);
+		printRes(res);
+	}
 	
 	@SuppressWarnings("unused")
 	private static void LC_1365() {
@@ -58,6 +68,7 @@ public class Main {
 	private static void printRes(int []res) {
 		for (int i = 0; i < res.length; i++) {
 			System.out.print(res[i]);
+			System.out.print(", ");
 		}
 	}
 	
