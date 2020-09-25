@@ -1,5 +1,6 @@
 package leetcode.array;
 
+import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
@@ -8,11 +9,11 @@ public class Main {
 	
 	public static void main(String[] args) {
 		
-		LC_1389_CreateTarget createTarget = new LC_1389_CreateTarget();
-		int[] nums = {0,1,2,3,4};
-		int[] index = {0,1,2,2,1};
- 		int[] res = createTarget.createTargetArray(nums, index);
- 		printRes(res);
+//		LC_1389_CreateTarget createTarget = new LC_1389_CreateTarget();
+//		int[] nums = {1};
+//		int[] index = {0};
+// 		int[] res = createTarget.createTargetArray(nums, index);
+// 		printRes(res);
  		
 	}
 
@@ -66,6 +67,10 @@ public class Main {
 	}
 	
 	private static void printRes(int []res) {
+		if (res == null) {
+			System.out.print("nothing");
+			return;
+		}
 		for (int i = 0; i < res.length; i++) {
 			System.out.print(res[i]);
 			System.out.print(", ");
